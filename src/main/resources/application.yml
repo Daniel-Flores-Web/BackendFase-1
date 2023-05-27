@@ -1,0 +1,33 @@
+spring:
+  profiles:
+    active: qa
+---
+server:
+  port: 8088
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    username: root
+    password: admin
+    url: jdbc:mysql://localhost:3306/restfulapi
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+---
+server:
+  port: 8089
+spring:
+  config:
+    activate:
+      on-profile: qa
+  datasource:
+    username: root
+    password: admin
+    url: jdbc:mysql://localhost:3306/restfulapi_qa
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true

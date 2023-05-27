@@ -18,7 +18,7 @@ public class Local {
     private Long id;
     @NotBlank(message = "Please add the name")
     private String name;
-    @Length(min = 4, max = 10)
     private String floor;
+    @Length(min = 4, max = 10)
     private String code;
 }
